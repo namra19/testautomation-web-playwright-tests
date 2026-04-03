@@ -1,0 +1,24 @@
+{
+  "name": "testautomation-web-playwright-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namra19/testautomation-web-playwright-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namra19/testautomation-web-playwright-tests/issues"
+  },
+  "homepage": "https://github.com/namra19/testautomation-web-playwright-tests#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.5.2",
+    "playwright": "^1.59.1",
+    "typescript": "^6.0.2"
+  }
+}
