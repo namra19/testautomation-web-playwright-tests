@@ -11,12 +11,10 @@ export const test = base.extend<Fixtures>({
         await use(async (role) => {
             const login = new LoginPage(page);
             await login.navigate();
-            await login.login(
-                users[role].email,
-                users[role].password
-            );
+
+            const user = users[role]
+            await login.login(user.email, user.password);
         });
-       
     }
 });
 

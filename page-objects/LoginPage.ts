@@ -7,12 +7,14 @@ export class LoginPage {
     readonly emailInput: Locator;
     readonly passwordInput: Locator;
     readonly loginButton: Locator;
+    readonly errorMessage: Locator;
 
     constructor(page: Page) {
         this.page = page;
         this.emailInput = page.locator('#email');
         this.passwordInput = page.locator('#password');
         this.loginButton = page.getByRole('button', { name: 'LOGIN' });
+        this.errorMessage = page.locator('#error')
     }
     //Navigate to the website
     async navigate() {
@@ -33,6 +35,13 @@ export class LoginPage {
 
     async assertLoginPageVisible() {
         await expect(this.loginButton).toBeVisible();
+    }
+
+    async assertErrorMessageVisible(expectedText?: string) {
+        await expect(this.errorMessage).toBeVisible();
+        if (expectedText) {
+            await expect(this.errorMessage).toHaveText(expectedText)
+        }
     }
 
 }
